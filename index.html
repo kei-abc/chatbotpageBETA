@@ -1793,11 +1793,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 </body>
 
+
 <script>
 (function () {
+  var HOST = "https://chat.abccapital.jp";
+  var WS_HOST = "wss://chat.abccapital.jp";
+
   var script = document.createElement("script");
   script.charset = "utf-8";
-  script.src = "http://chat.abccapital.jp/embed/chatbot.js?v=" + Date.now();
+  script.src = HOST + "/embed/chatbot.js?v=" + Date.now();
 
   script.onload = function () {
     initializeChatbot({
@@ -1805,7 +1809,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       extra_urls: [],
       prefixes: [],
       chatbotName: "abc AI Chat",
-      wsUrl: "ws://chat.abccapital.jp/api/ws/chat",
+      wsUrl: WS_HOST + "/api/ws/chat",
       instruction: "",
       isOpen: false,
       theme: "auto",
@@ -1816,6 +1820,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   document.head.appendChild(script);
 })();
 </script>
+
 
 
 
