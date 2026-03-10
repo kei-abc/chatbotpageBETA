@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /gfa_wp/wp-admin/
+Allow: /gfa_wp/wp-admin/admin-ajax.php
+
+Sitemap: https://www.gfa.co.jp/sitemap.xml
+Sitemap: https://www.gfa.co.jp/sitemap.rss
