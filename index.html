@@ -110,23 +110,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
   <script src="gfa_wp/wp-content/themes/gfa_theme/assets/js/lottie.min.js"></script>
   <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
-  <style>
-    .__testWatermark {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-22deg);
-      z-index: 2147483647;
-      pointer-events: none;
-      user-select: none;
-      white-space: nowrap;
-      font-size: clamp(28px, 7vw, 88px);
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: rgba(0, 0, 0, 0.12);
-      text-shadow: 0 0 1px rgba(255, 255, 255, 0.35);
-    }
-  </style>
 </head>
 
 
@@ -134,7 +117,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 
 <body id="is__container" data-barba="wrapper">
-  <div class="__testWatermark" aria-hidden="true">これはテストページです</div>
 
   <header id="__globalHeader">
     <div class="__headerInner">
@@ -1811,12 +1793,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 </body>
 
-
 <script>
 (function () {
   var script = document.createElement("script");
   script.charset = "utf-8";
-  script.src = "https://chat.abccapital.jp/embed/chatbot.js?v=" + Date.now();
+  script.src = "http://localhost:8010/embed/chatbot.js?v=" + Date.now();
 
   script.onload = function () {
     initializeChatbot({
@@ -1824,7 +1805,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       extra_urls: [],
       prefixes: [],
       chatbotName: "abc AI Chat",
-      wsUrl: "ws://localhost:8001/api/ws/chat",
+      wsUrl: "ws://localhost:8010/api/ws/chat",
       instruction: "",
       isOpen: false,
       theme: "auto",
@@ -1835,6 +1816,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   document.head.appendChild(script);
 })();
 </script>
+
 
 
 
